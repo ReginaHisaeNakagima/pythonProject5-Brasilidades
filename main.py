@@ -1,19 +1,16 @@
-from cpf_cnpj import Documento
+from TelefonesBr import TelefonesBr
 import re
 
-'''
-cpf_um = "11111111112"
-#exemplo_cnpj = "35379838000112"
-#exemplo_cpf = "11111111112"
-documento = Documento.cria_documento(cpf_um)
-print(documento)
-'''
+telefone = "552126481234"
 
-padrao = "\w{5,50}@[a-z]{3,10}.com.br"
-texto = "aaabbbcc rodrigo123@gmail.com.br ccbbbaaa"
-resposta = re.search(padrao, texto)
+telefone_objeto = TelefonesBr(telefone)
 
-print(resposta.group())
+#   padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
+#resposta = re.search(padrao,telefone)
+#print(resposta.group())
+
+print(telefone_objeto)
+
 
 
 
