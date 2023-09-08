@@ -1,6 +1,14 @@
-from acesso_cep import BuscaEndereco
+import requests
 
-cep = 25870145
+from acesso_cep import BuscaEndereco
+cep = "01001000"
 objeto_cep = BuscaEndereco(cep)
-print(objeto_cep)
+
+#r = requests.get("https://viacep.com.br/ws/01001000/json/")
+#print(type(r.text))
+
+a = objeto_cep.acessa_via_cep()
+print(type(a))
+print(dir(a))
+
 
